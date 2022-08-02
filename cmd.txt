@@ -1,1 +1,4 @@
-celery -A proj worker -l info --pool=solo
+run in terminal :celery -A proj worker -l info --pool=solo
+to check celery working, open new ternimal and type : python manage.py shell
+now type : from app1.tasks import add (hit enter)
+after that : add.delay(5,2)     (hit enter and check in previous terminal where celery is running )
